@@ -1,0 +1,23 @@
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Login</li>
+  </ol>
+</nav>
+<form class="row g3 need-validation" method="post" action="/login" novalidate>
+    <div class="col-6">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+        </div>
+    </div>
+    <div class="col-12 d-grid">
+        <button class="btn btn-primary" type="submit" >Login</button>
+    </div>
+</form>
