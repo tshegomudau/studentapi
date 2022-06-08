@@ -16,7 +16,7 @@ exports.view = (req, res) => {
         connection.query('select * From user where status = "active"',(err,rows) => {
             connection.release();
             if(!err){
-                res.render('home',{rows: rows})
+                res.render('login',{rows: rows})
             } else{
                 console.log(err);
             }

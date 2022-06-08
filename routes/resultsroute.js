@@ -3,8 +3,10 @@ const router = express.Router();
 const results = require('../service/resultsService');
 const userController =require('../controllers/userController');
 
-/* GET results. */
-router.get('/', async function(req, res, next) {
+router.get('/login', userController.view);
+router.post('/', userController.find);
+/* GET results.*/ 
+router.get('/all', async function(req, res, next) {
   try {
     res.json(await results.getMultiple(req.query.page));
   } catch (err) {
@@ -48,7 +50,6 @@ router.post('/', async function(req, res, next) {
       next(err);
     }
   });
-  router.get('/login', userController.login);
-router.post('/', userController.find);
+  
 
 module.exports = router;
